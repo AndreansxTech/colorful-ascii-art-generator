@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful ASCII Art Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Colorful ASCII Art Generator</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="generateButton">Generate ASCII Art</button>
+        <pre id="asciiArtOutput"></pre>
+    </div>
+    <script src="scripts/imageProcessor.js"></script>
+    <script src="scripts/asciiConverter.js"></script>
+    <script src="scripts/colorMapper.js"></script>
+    <script>
+        document.getElementById('generateButton').addEventListener('click', async () => {
+            const fileInput = document.getElementById('imageUpload');
+            if (fileInput.files.length > 0) {
+                const imageData = await processImage(fileInput.files[0]);
+                const asciiArt = convertToAscii(imageData);
+                const coloredAsciiArt = mapColors(asciiArt);
+                document.getElementById('asciiArtOutput').textContent = coloredAsciiArt;
+            } else {
+                alert('Please upload an image file.');
+            }
+        });
+    </script>
+</body>
+</html>
