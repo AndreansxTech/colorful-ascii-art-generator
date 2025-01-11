@@ -1,14 +1,20 @@
 # Colorful ASCII Art Generator
 
 ## Overview
-An interactive web application that transforms images into ASCII art with real-time color mapping and customization options. This project uses modern web technologies to create an engaging and user-friendly experience for generating ASCII art from any image.
+Ever needed to place a image in your profile but couldn't because it did not allow images?
+With ASCII art you can easily place any image in your profile only using text !
+This interactive web application transforms images into ASCII art with real-time color mapping and customization options. 
+I used modern web technologies to create an engaging and user-friendly experience for generating ASCII art from any image.
+
 
 ## Features
 ### Core Functionality
 - Convert any image to ASCII art
 - Real-time color mapping based on original image colors
+- Uses 18 colors
 - Adjustable output size based on image dimensions
 - Responsive and mobile-friendly design
+- Download ASCII art as PNG
 
 ### Customization Options
 - Toggle between color and monochrome output
@@ -24,9 +30,9 @@ An interactive web application that transforms images into ASCII art with real-t
 - Progress feedback during processing
 
 ### Export Options
-- Download ASCII art as PNG images
-- Customizable background colors for exports
-- High-quality image generation
+- Download the created ASCII art as a PNG image 
+- Dark and light background for exports
+- High-quality image quality
 - Maintains formatting and spacing in exported files
 
 ## Technologies Used
@@ -41,12 +47,12 @@ An interactive web application that transforms images into ASCII art with real-t
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
-- Local development server (optional)
+- Local development server ( optionally )
 
 ### Installation
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/ascii-art-generator.git
+   git clone https://github.com/AndreansxTech/colorful-ascii-art-generator.git
    ```
 2. Navigate to the project directory:
    ```
@@ -58,7 +64,7 @@ An interactive web application that transforms images into ASCII art with real-t
    ```
 
 ## Usage
-1. Open `src/index.html` in your browser.
+1. Open `public/index.html` in your browser.
 2. Click on the upload area to select an image.
 3. Click the "Generate ASCII Art!" button to see the result.
 
