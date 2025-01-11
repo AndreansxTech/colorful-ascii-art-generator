@@ -1,0 +1,32 @@
+{
+  "name": "colorful-ascii-art-generator",
+  "version": "1.0.0",
+  "description": "A project that allows users to upload a file and displays ASCII art with colors similar to those in the uploaded file.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "jimp": "^0.16.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "ts-node": "^10.4.0",
+    "jest": "^27.0.6",
+    "@types/jest": "^27.0.2",
+    "@types/express": "^4.17.13",
+    "@types/multer": "^1.4.7"
+  },
+  "keywords": [
+    "ASCII",
+    "art",
+    "generator",
+    "color",
+    "image"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
