@@ -41,6 +41,9 @@ Please note that this isnt realy-well-made bacause it cannot process large image
 - High-quality image quality
 - Maintains formatting and spacing in exported files
 
+![image](https://github.com/user-attachments/assets/552c1e80-760e-4d93-9e4a-d06854b413a3)
+
+
 ## Technologies Used
 - HTML5 & CSS3
 - JavaScript (ES6+)
