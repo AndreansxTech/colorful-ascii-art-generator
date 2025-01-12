@@ -29,6 +29,11 @@ Please note that this isnt realy-well-made bacause it cannot process large image
 - Drag-and-drop file upload
 - File name display after selection
 - Progress feedback during processing
+- Preview below: </br></br>
+
+![Zrzut ekranu 2025-01-12 143553](https://github.com/user-attachments/assets/fc60d4e0-d084-480c-9b04-3c8e35ef24c8)
+
+
 
 ### Export Options
 - Download the created ASCII art as a PNG image 
