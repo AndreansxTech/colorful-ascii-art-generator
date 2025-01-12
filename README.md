@@ -5,6 +5,7 @@ Ever needed to place a image in your profile but couldn't because it did not all
 With ASCII art you can easily place any image in your profile only using text !
 This interactive web application transforms images into ASCII art with real-time color mapping and customization options. 
 I used modern web technologies to create an engaging and user-friendly experience for generating ASCII art from any image.
+Please note that this isnt realy-well-made bacause it cannot process large images quickly. It works best for profile pictures around 200x200 to 500x500
 
 
 ## Features
