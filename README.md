@@ -1,5 +1,8 @@
 # Colorful ASCII Art Generator
 
+## Latest update 21.01.2024
+- Now the app is available via <a href="https://ascii-art-gen.pages.dev/public/">website</a>
+
 ## Overview
 Ever needed to place a image in your profile but couldn't because it did not allow images?
 With ASCII art you can easily place any image in your profile only using text !
