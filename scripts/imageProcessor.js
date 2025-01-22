@@ -36,26 +36,27 @@ function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
     };
 }
 
-function calculateOptimalDimensions(width, height) {
-    const maxWidth = 200;
-    const maxHeight = 100;
-    const minWidth = 40;
-    const minHeight = 20;
-    
-    // Calculate base ratio that would fit maxWidth
-    let targetWidth = Math.min(Math.max(Math.floor(width / 8), minWidth), maxWidth);
-    let targetHeight = Math.floor((targetWidth * height) / width);
-    
-    // If height is too large, recalculate based on height
-    if (targetHeight > maxHeight) {
-        targetHeight = maxHeight;
-        targetWidth = Math.floor((targetHeight * width) / height);
-    } else if (targetHeight < minHeight) {
-        targetHeight = minHeight;
-        targetWidth = Math.floor((targetHeight * width) / height);
+export function calculateOptimalDimensions(width, height, options = {}) {
+    const {
+        targetWidth = 100,
+        targetHeight = 50,
+        preserveAspectRatio = true,
+        maxWidth = 200,
+        maxHeight = 100
+    } = options;
+
+    if (preserveAspectRatio) {
+        const ratio = Math.min(targetWidth / width, targetHeight / height);
+        return {
+            width: Math.floor(width * ratio),
+            height: Math.floor(height * ratio)
+        };
     }
-    
-    return { width: targetWidth, height: targetHeight };
+
+    return {
+        width: Math.min(targetWidth, maxWidth),
+        height: Math.min(targetHeight, maxHeight)
+    };
 }
 
 export async function processImage(file) {
