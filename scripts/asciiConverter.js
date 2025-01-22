@@ -1,5 +1,22 @@
-export function convertToAscii(imageData) {
-    const asciiChars = '@%#*+=:-. '; // Simplified character set based on intensity only
+const CHAR_SETS = {
+    standard: '@%#*+=:-. ',
+    detailed: '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'. ',
+    blocks: '█▀▄▌▐░⎸⎹ ',
+    simple: '#@:. ',
+    binary: '01',
+    shades: '█▓▒░ ',
+    braille: '⠁⠃⠇⠏⠟⠿⡿⣿',
+    numbers: '0123456789'
+};
+
+export function convertToAscii(imageData, options = {}) {
+    const {
+        charSet = 'standard',
+        invert = false
+    } = options;
+
+    const chars = CHAR_SETS[charSet] || CHAR_SETS.standard;
+    const charsArray = invert ? chars.split('').reverse().join('') : chars;
     const width = imageData.width;
     const height = imageData.height;
     let asciiArt = [];
@@ -14,11 +31,11 @@ export function convertToAscii(imageData) {
 
             // Calculate brightness for character selection
             const brightness = (r + g + b) / 3;
-            const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
+            const charIndex = Math.floor((brightness / 255) * (charsArray.length - 1));
             
             // Store character and its color
             line.push({
-                char: asciiChars[charIndex],
+                char: charsArray[charIndex],
                 color: `rgb(${r},${g},${b})`
             });
         }
